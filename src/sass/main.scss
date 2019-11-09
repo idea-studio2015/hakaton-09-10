@@ -4,7 +4,10 @@
 
 @import 'normalize.scss';
 @import 'base.scss';
+@import 'components/variables.scss';
 @import 'components/placeholders.scss';
+@import 'components/layout.scss';
+
 
 // вставляем свой код через импорт, как сверху
 @import 'header.scss';
