@@ -4,12 +4,13 @@
 
 @import 'normalize.scss';
 @import 'base.scss';
-
+@import 'components/placeholders.scss';
 
 // вставляем свой код через импорт, как сверху
+@import 'header.scss';
 
 // в папке хтмл создаются блоки лендинга
-// header.html
+
 // footer.html
 
 // далее идем в наш файл index.html и в боди вставляем структуру

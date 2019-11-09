@@ -1,15 +1,16 @@
 .container {
-  min-width: 281px;
+
 }
 
 @media (min-width: 768px) {
   .container {
-    min-width: 689px;
+  padding: 0px 40px;
   }
 }
 
 @media (min-width: 1240px) {
   .container {
-    min-width: 1234px;
+    width: 1200px;
+    margin: 0  auto;
   }
 }
