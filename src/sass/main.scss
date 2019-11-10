@@ -7,16 +7,11 @@
 @import 'components/variables.scss';
 @import 'components/placeholders.scss';
 @import 'components/layout.scss';
+@import 'components/common-styles.scss';
 @import 'burger.scss';
-
-
-// вставляем свой код через импорт, как сверху
 @import 'header.scss';
-
-// в папке хтмл создаются блоки лендинга
-
-// footer.html
-
-// далее идем в наш файл index.html и в боди вставляем структуру
-//= ./html/header.html
-//= ./html/header.html
+@import 'section-first.scss';
+@import 'fonts.scss';
+@import 'directions-block.scss';
+@import 'programm-block.scss';
+@import 'button-up.scss';

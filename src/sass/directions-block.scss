@@ -1,0 +1,246 @@
+// direction-block styles
+
+.direction {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.direction-block {
+  margin: 0;
+  padding: 0;
+}
+
+.direction-title-block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.direction-items__title {
+  font-family: $title-font;
+  color: $mobile-title-color;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 26px;
+  transition: color 2s;
+}
+
+.direction-items__description {
+  font-family: $main-font;
+  color: $text-color;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 30px;
+  transition: color 0.7s;
+}
+
+.direction-items__years{
+  position: relative;
+  font-family: $main-font;
+  color: $decor-color;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  transition: color 2s;
+}
+
+.direction-items__years-text {
+  position: absolute;
+  font-family: $main-font;
+  color: $decor-color;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: underline;
+  bottom: 29px;
+  transition: color 2s;
+}
+
+.direction-items__description:hover,
+.direction-items__years:hover,
+.direction-items__years-text:hover {
+  color: $white-color;
+}
+
+.direction-items__icon:hover {
+  fill: $white-color;
+}
+
+.direction-items {
+  min-width: 280px;
+  height: 225px;
+  padding: 30px 70px 20px 45px;
+  text-align: left;
+  margin: 0 auto;
+  transition: background-color 1.5s;
+
+  &:hover {
+    background-color: $decor-color;
+    border-radius: 5px;
+
+    & .direction-items__description,
+    & .direction-items__years,
+    & .direction-items__years-text {
+      color: $white-color;
+    }
+
+    & .direction-items__icon {
+      fill: $white-color;
+    }
+  }
+}
+
+.direction-items__icon {
+  fill: $decor-color;
+  width: 19px;
+  height: 14px;
+}
+
+@media (min-width: 768px) {
+  .direction-block {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .direction-items:first-child::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 95%;
+    bottom: 0;
+    left: 2%;
+    border-bottom: 2px dashed #e4e4e5;
+  }
+
+  .direction-items:first-child:hover::before {
+    border-bottom: none;
+  }
+
+  .direction-items:nth-child(2)::after {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 94%;
+    left: 0;
+    top: 2%;
+    border-left: 2px dashed #e4e4e5;
+  }
+
+  .direction-items:nth-child(2):hover::after {
+    border-left: none;
+  }
+
+  .direction-items:nth-child(2)::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 95%;
+    bottom: 0;
+    right: 2%;
+    border-bottom: 2px dashed #e4e4e5;
+  }
+
+  .direction-items:nth-child(2):hover::before {
+    border-bottom: none;
+  }
+
+  .direction-items:last-child::after {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 94%;
+    left: 0;
+    bottom: 2%;
+    border-left: 2px dashed #e4e4e5;
+  }
+
+  .direction-items:last-child:hover::after {
+    border-left: none;
+  }
+
+  .direction-items {
+    position: relative;
+    width: 50%;
+    height: 297px;
+    padding: 55px 30px 20px 57px;
+    margin: 0;
+    background-color: #fafafa;
+    border-radius: 7px;
+    transition: 0.7s;
+
+    &:hover {
+      transform: scale(1.05);
+      z-index: 999;
+      border: none;
+
+      & .direction-items__icon {
+        position: absolute;
+        left: 72px;
+        transition: 0.7s;
+        transform: scaleX(2);
+      }
+    }
+  }
+
+  .direction-items__title {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  .direction-items__description {
+    line-height: 22px;
+  }
+
+  .direction-items__years {
+    font-size: 40px;
+  }
+
+  .direction-items__years-text {
+    bottom: 39px;
+    left: 109px;
+  }
+}
+
+@media (min-width: 1380px) {
+  .direction {
+    margin-bottom: 115px;
+  }
+
+  .direction-block {
+    flex-wrap: nowrap;
+  }
+
+  .direction-items {
+    border-right: 2px dashed #e4e4e5;
+    border-radius: 0px;
+  }
+
+  .direction-items:last-child {
+    border-right: none;
+  }
+
+  .direction-items:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  }
+
+  .direction-items:first-child::before {
+    border-bottom: none;
+  }
+
+  .direction-items:nth-child(2)::after {
+    border-left: none;
+  }
+
+  .direction-items:nth-child(2)::before {
+    border-bottom: none;
+  }
+
+  .direction-items:last-child::after {
+    border-left: none;
+  }
+}
+
