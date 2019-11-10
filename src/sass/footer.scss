@@ -17,7 +17,7 @@ p {
         width: 100%;
         margin: 0 auto;
         padding: 0;
-        padding-bottom: 33px;
+        padding: 0 45px 33px;
 }
 
 .footer-block {
@@ -143,8 +143,12 @@ input[type="radio"].visually-hidden{
 
     .up {
         width: 100%;
+        padding: 0 0 33px 0;
     }
 
+    .bottom {
+      padding: 25px 0;
+    }
     .logo-footer {
         text-align: left;
     }

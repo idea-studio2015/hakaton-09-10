@@ -56,6 +56,13 @@
   transition: color 2s;
 }
 
+.direction-items__icon {
+  fill: $decor-color;
+  width: 19px;
+  height: 14px;
+  transition: fill 0.7s, width 0.7s;
+}
+
 .direction-items__description:hover,
 .direction-items__years:hover,
 .direction-items__years-text:hover {
@@ -64,6 +71,7 @@
 
 .direction-items__icon:hover {
   fill: $white-color;
+  width: 25px;
 }
 
 .direction-items {
@@ -86,14 +94,9 @@
 
     & .direction-items__icon {
       fill: $white-color;
+      width: 25px;
     }
   }
-}
-
-.direction-items__icon {
-  fill: $decor-color;
-  width: 19px;
-  height: 14px;
 }
 
 @media (min-width: 768px) {
