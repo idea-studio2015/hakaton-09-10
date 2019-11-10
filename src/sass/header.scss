@@ -8,11 +8,11 @@
     background-color: #fff;
     }
 
-    @media (min-width: 1200px) {
+    @media only screen and (min-width: 1200px) {
         background-color: transparent;
         }
 
-    @media (min-width: 1400px) {
+    @media only screen and (min-width: 1400px) {
     background-color: transparent;
     }
 
@@ -26,12 +26,23 @@
     background-repeat: no-repeat;
 
     @media (min-width: 768px) {
-    background-image: url(../images/bcg-header_768x600.jpg);
+        background-image: url(../images/bcg-header_768x600.jpg);
     }
 
-    
     @media (min-width: 1400px) {
-    background-image: url(../images/bcg-header_1920x967.jpg);
+        background-image: url(../images/bcg-header_1920x967.jpg);
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background: url(../images/bcg-header_320x559@2x.jpg);
+    }
+
+    @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi) {
+        background-image: url(../images/bcg-header_768x600@2x.jpg);
+    }
+
+    @media (min-width: 1400px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi) {
+        background-image: url(../images/bcg-header_1920x967@2x.jpg);
     }
 }
 
@@ -41,12 +52,22 @@
     border-radius: 5px;
     background-color: rgb(252, 174, 38);
     box-shadow: 0px 3px 5px 0px rgba(252, 174, 38, 0.4);
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
     border: none;
     font-size: 18px;
     font-family: "OpenSans";
     color: rgb(246, 249, 250);
     font-weight: bold;
     line-height: 42px;
+
+    &:hover {
+        transition-property: box-shadow, background-color;
+        transition-duration: 0.5s;
+        box-shadow: 0px 5px 7px 0px rgba(252, 174, 38, 0.4);
+        background-color: rgb(9, 201, 9);
+
+    }
 }
 
 .page-title, .title-btn {
@@ -71,7 +92,7 @@
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    opacity: 0;
+    opacity: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -81,7 +102,7 @@
     font-size: 0px;
     z-index: 1;
 
-    @media (min-width: 1200px) {
+    @media only screen and (min-width: 1200px) {
         display: flex;
         flex-direction: row;
         position: static !important;
@@ -96,7 +117,7 @@
         font-weight: bold;
     }
 
-    @media (min-width:1400px) {
+    @media only screen and (min-width:1400px) {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -165,7 +186,7 @@
     padding-bottom: 320px;
     }
 
-    
+
     @media (min-width: 1400px) {
     padding-bottom: 577px;
     }
@@ -180,11 +201,6 @@
     background-repeat: no-repeat;
     cursor: pointer;
 
-    @media (min-width: 768px) {
-    background-image: url(../images/icons/buger_tablet_28x19.png);
-    }
-
-    
     @media (min-width: 1400px) {
     display: none !important;
     }
@@ -200,11 +216,11 @@
     min-width: auto;
     }
 
-    @media (min-width: 1200px) {
+    @media only screen and (min-width: 1200px) {
         min-width: 80%;
        }
 
-    @media (min-width: 1400px) {
+    @media only screen and (min-width: 1400px) {
      min-width: 60%;
     }
 }
