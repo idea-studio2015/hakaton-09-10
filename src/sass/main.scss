@@ -3,15 +3,11 @@
  */
 
 @import 'normalize.scss';
+@import 'components/variables.scss';
+@import 'components/layout.scss';
 @import 'base.scss';
-
-
-// вставляем свой код через импорт, как сверху
-
-// в папке хтмл создаются блоки лендинга
-// header.html
-// footer.html
-
-// далее идем в наш файл index.html и в боди вставляем структуру
-//= ./html/header.html
-//= ./html/header.html
+@import 'fonts.scss';
+@import 'directions-block.scss';
+@import 'programm-block.scss';
+@import 'components/common-styles.scss';
+@import 'button-up.scss'

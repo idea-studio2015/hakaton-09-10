@@ -1,0 +1,26 @@
+.button {
+  display: inline-block;
+  background-color: #333333;
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  border-radius: 50px;
+  position: fixed;
+  bottom: 35px;
+  right: 40px;
+  z-index: 1000;
+}
+
+.button::after {
+  content: "\f062";
+  font-family: FontAwesome;
+  font-size: 20px;
+  line-height: 65px;
+  color: #fff;
+}
+
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  background-color: #555555;
+}
