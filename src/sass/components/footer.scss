@@ -94,6 +94,20 @@ input[type="radio"].visually-hidden{
     margin:0;
 }
 
+.paragraph {
+    color: $footer-text-color;
+    font-size: 14px;
+    line-height: 25px;
+    font-family: $title-font;
+}
+
+.paragraph-rules {
+    color: $footer-bottom-text-color;
+    font-size: 14px;
+    line-height: 25px;
+    font-family: $title-font;
+}
+
 @media (max-width:767px) {
    
     .up {
@@ -112,7 +126,6 @@ input[type="radio"].visually-hidden{
 @media (min-width: 768px) {
     .rules {
         display: flex;
-
     }
 
     .rules li:not(:nth-of-type(3)) {
@@ -136,5 +149,24 @@ input[type="radio"].visually-hidden{
 
     .button-yellow {
         margin-bottom: 21px;
+    }
+}
+
+@media (min-width: 1380px) {
+    .rules li:not(:nth-of-type(3)) {
+        margin-right: 70px;
+    }
+
+    .adress {
+        margin-right: 140px;
+    }
+
+    .contacts {
+        margin-right: 160px;
+    }
+
+    .button-links {
+        display: flex;
+        flex-direction: row;
     }
 }
