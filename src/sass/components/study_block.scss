@@ -14,10 +14,9 @@
 
 .study__list 
 {
-    width: 281px;
+    width: 100%;
     list-style: none;
     padding: 0;
-    margin: 0 auto;
 
 }
 
@@ -102,13 +101,8 @@
 
     .study__list 
     {
-        min-width: 532px;
-        margin: 0 auto;
+        min-width: 100%;
         padding: 0;
-    }
-
-    .study__list 
-    {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -130,7 +124,7 @@
 
     .study__list 
     {
-        width: 1234px;
+        max-width: 1234px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
