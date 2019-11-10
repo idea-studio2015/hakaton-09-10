@@ -3,7 +3,13 @@
  */
 
 @import 'normalize.scss';
+@import 'components/variables.scss';
+@import 'components/layout.scss';
 @import 'base.scss';
+@import 'fonts.scss';
+@import 'directions-block.scss';
+@import 'programm-block.scss';
+@import 'components/common-styles.scss';
 
 
 // вставляем свой код через импорт, как сверху

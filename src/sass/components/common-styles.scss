@@ -1,0 +1,28 @@
+.title-icon-block{
+  fill: $white-color;
+  width: 32px;
+  height: 32px;
+  background-color: $decor-color;
+  border-radius: 50%;
+  margin-right: 17px;
+}
+
+.title-section {
+  font-family: $title-font;
+  color: $mobile-title-color;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title-icon {
+  position: relative;
+  top: 4px;
+  left: 4px;
+}
+
+@media (min-width: 768px) {
+  .title-section {
+    font-size: 33px;
+  }
+}
