@@ -1,14 +1,52 @@
 .container-width {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     padding: 17px 20px;
+
+    @media (min-width: 768px) {
+    background-color: #fff;
+    }
+
+    @media (min-width: 1200px) {
+        background-color: transparent;
+        }
+
+    @media (min-width: 1400px) {
+    background-color: transparent;
+    }
+
 }
 
 .first-monitor {
+    position: relative;
     background-image: url(../images/bcg-header_320x559.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media (min-width: 768px) {
+    background-image: url(../images/bcg-header_768x600.jpg);
+    }
+
+    
+    @media (min-width: 1400px) {
+    background-image: url(../images/bcg-header_1920x967.jpg);
+    }
+}
+
+.button-yellow {
+    width: 192px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: rgb(252, 174, 38);
+    box-shadow: 0px 3px 5px 0px rgba(252, 174, 38, 0.4);
+    border: none;
+    font-size: 18px;
+    font-family: "OpenSans";
+    color: rgb(246, 249, 250);
+    font-weight: bold;
+    line-height: 42px;
 }
 
 .page-title, .title-btn {
@@ -27,26 +65,43 @@
 }
 
 .nav__list {
-    position: absolute;
-    opacity: 0;
+    position: absolute !important;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
     box-sizing: border-box;
-    width: 0px;
-    height: 0px;
     opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #824fe3;
     margin: 0;
     font-size: 0px;
+    z-index: 1;
 
-    @media (min-width: 768px) {
-
+    @media (min-width: 1200px) {
+        display: flex;
+        flex-direction: row;
+        position: static !important;
+        background-color: transparent;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 100% !important;
+        opacity: 1;
+        font-size: 28px;
+        font-family: "Ubuntu";
+        color: rgb(255, 255, 255);
+        font-weight: bold;
     }
 
-    
-    @media (min-width: 960px) {
+    @media (min-width:1400px) {
         display: flex;
+        align-items: center;
         justify-content: space-between;
-        position: static;
+        min-width: 100% !important;
         opacity: 1;
-        width: 100px;
         font-size: 28px;
         font-family: "Ubuntu";
         color: rgb(255, 255, 255);
@@ -54,15 +109,67 @@
     }
 }
 
+.nav__link {
+    position: relative;
+    font-size: 18px;
+    font-family: "Ubuntu";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 3.293;
+
+    &:hover::after  {
+        transition-property: opacity;
+        opacity: 1;
+    }
+
+    @media (min-width: 768px) {
+
+    }
+
+    
+    @media (min-width: 1400px) {
+
+    }
+}
+
+.nav__item {
+    padding: 0;
+    margin: 0;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 3px;
+    background-color: #fcae26;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    opacity: 0;
+    }
+
+
 // .header-btn:focus .nav__list {
 //     position: static;
 //     opacity: 1;
 //     width: 100px;
-//     font-size: 28px;
-//     font-family: "Ubuntu";
-//     color: rgb(255, 255, 255);
-//     font-weight: bold;
 // }
+
+.header {
+    padding-bottom: 280px;
+
+    @media (min-width: 768px) {
+    padding-bottom: 320px;
+    }
+
+    
+    @media (min-width: 1400px) {
+    padding-bottom: 577px;
+    }
+}
 
 .header-btn {
     border: none;
@@ -74,19 +181,32 @@
     cursor: pointer;
 
     @media (min-width: 768px) {
-
+    background-image: url(../images/icons/buger_tablet_28x19.png);
     }
 
     
-    @media (min-width: 960px) {
-    background-image: none;
+    @media (min-width: 1400px) {
+    display: none !important;
     }
 }
 
 .nav {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 280px;
+    min-width: auto;
+
+
+    @media (min-width: 768px) {
+    min-width: auto;
+    }
+
+    @media (min-width: 1200px) {
+        min-width: 80%;
+       }
+
+    @media (min-width: 1400px) {
+     min-width: 60%;
+    }
 }
 
 .header-btn {
@@ -99,14 +219,8 @@
     list-style: none;
 }
 
-.logo-img {
-    width: 100px;
-
-    img {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
+.logo {
+    z-index: 2;
 }
 
 .link {
@@ -147,7 +261,7 @@
     }
 }
 
-.wrapper-description {
+.header__description {
     display: block;
     position: relative;
     padding: 7px 0;
@@ -160,9 +274,8 @@
     line-height: 1.375;
     margin: 0 auto;
     margin-bottom: 131px;
-
     &--gold-decor {
-        text-align: start;
+    text-align: start;
     }
 
     @media (min-width: 768px) {
@@ -171,6 +284,7 @@
         font-family: "Ubuntu";
         color: rgb(255, 255, 255);
         line-height: 1.185;
+        margin-bottom: 79px;
     }
 
     @media (min-width: 1400px) {
@@ -180,6 +294,7 @@
         text-align: left;
         margin: 0;
         padding-left: 60px;
+        margin-bottom: 119px;
 
         &::before {
             content: '';
@@ -194,11 +309,11 @@
     }
 }
 
-.header__description::after {
+.first-monitor::after {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: -82px;
+    bottom: 0px;
     transform: translateX(-50);
     display: block;
     width: 13px;
@@ -207,5 +322,13 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media (min-width: 768px) {
+    bottom: 0px;
+    }
+
+    @media (min-width: 1400px) {
+    bottom: -300px;
+    }
 
 }
