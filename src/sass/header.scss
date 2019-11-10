@@ -58,7 +58,7 @@
     transition-duration: 0.5s;
     border: 0px;
     font-size: 18px;
-    font-family: "OpenSans";
+    font-family: $main-font;
     color: rgb(246, 249, 250);
     font-weight: bold;
     line-height: 42px;
@@ -167,7 +167,6 @@
     @media only screen and (min-width: 1200px) {
         font-size: 18px;
     }
-    
 }
 
 .nav__item {
@@ -187,14 +186,7 @@
     transition-property: opacity;
     transition-duration: 0.5s;
     opacity: 0;
-    }
-
-
-// .header-btn:focus .nav__list {
-//     position: static;
-//     opacity: 1;
-//     width: 100px;
-// }
+}
 
 .header {
     padding-bottom: 280px;
@@ -250,7 +242,7 @@
 
 .header__title, .header__description {
     text-align: center;
-    font-family: 'Open Sans';
+    font-family: $main-font;
     color: #fff;
 }
 
@@ -260,13 +252,13 @@
 
 .header__title {
     font-size: 35px;
-    font-family: "OpenSans";
+    font-family: $main-font;
     color: rgb(255, 255, 255);
     padding-bottom: 25px;
 
     @media (min-width: 768px) {
         font-size: 45px;
-        font-family: "OpenSans";
+        font-family: $main-font;
         color: rgb(255, 255, 255);
         line-height: 1.317;
     }
