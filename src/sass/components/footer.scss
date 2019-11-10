@@ -1,0 +1,140 @@
+p {
+    margin: 0;
+}
+
+.footer {
+    background-color: $footer-bg-color;
+    padding-top:88px;
+}
+
+.up {
+    padding-bottom: 33px;
+}
+
+.bottom {
+    background-color: $footer-bottom-bg-color;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.adress {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 34px;
+}
+
+.adress:before {
+    content: url(../images/logo.png);
+    display: block;
+    position: absolute;
+    bottom: -35px;
+}
+
+.contacts {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 34px;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden{
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+
+.button-yellow {
+    margin-bottom: 34px;
+}
+
+
+.links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.links li:nth-of-type(1) {
+    background-image: url('../images/telegram.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.links li:nth-of-type(2) {
+    background-image: url('../images/facebook.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.links li:nth-of-type(3) {
+    background-image: url('../images/youtube.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.rules {
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+
+@media (max-width:767px) {
+   
+    .up {
+        width: 281px;
+        margin: 0 auto;
+    }
+
+    .block {
+        width: 281px;
+        margin: 0 auto;
+    }
+
+
+}
+
+@media (min-width: 768px) {
+    .rules {
+        display: flex;
+
+    }
+
+    .rules li:not(:nth-of-type(3)) {
+        margin-right: 35px;
+    }
+
+    .footer-block {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .adress {
+        margin-right: 50px;
+        margin-bottom: 0;
+    }
+
+    .contacts {
+        margin-right: 50px;
+        margin-bottom: 0;
+    }
+
+    .button-yellow {
+        margin-bottom: 21px;
+    }
+}

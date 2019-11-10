@@ -4,6 +4,12 @@
 
 @import 'normalize.scss';
 @import 'base.scss';
+@import 'components/variables.scss';
+@import 'components/layout.scss';
+@import 'components/common-styles.scss';
+@import 'components/study_block.scss';
+@import 'components/footer.scss';
+
 
 
 // вставляем свой код через импорт, как сверху
