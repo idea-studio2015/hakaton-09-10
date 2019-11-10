@@ -17,5 +17,23 @@
     <!-- Сюда будет всталена ссылка на файл скриптов -->
     <!-- inject:js -->
     <!-- endinject -->
+    <script type="text/javascript">
+      (function() {
+
+        "use strict";
+
+        var toggle = document.querySelector(".toggle-hamburger");
+        var element = document.querySelector(".header")
+
+        toggleHandler(toggle, element);
+
+        function toggleHandler(toggler, element) {
+          toggle.addEventListener( "click", function(e) {
+            e.preventDefault();
+            (element.classList.contains("is-active") === true) ? element.classList.remove("is-active") : element.classList.add("is-active");
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
