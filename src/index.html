@@ -6,16 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>DreamTeam Hakaton 09-10 GoIteens</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- <link rel="javascript" href="/js/button.js"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Сюда будет всталена ссылка на файл стилей -->
+    <!-- inject:css -->
+    <!-- endinject -->
   </head>
 
   <body>
-      //= ./html/section-first.html
-      //= ./html/directions-block.html
-      //= ./html/study_block.html
-      //= ./html/programm-block.html
-      //= ./html/footer.html
-      <a class="button" href="#" title="Вгору"></a>
+    //= ./html/header.html
+    //= ./html/section-first.html
+    //= ./html/directions-block.html
+    //= ./html/study_block.html
+    //= ./html/programm-block.html
+    //= ./html/footer.html
+    <!-- Сюда будет всталена ссылка на файл скриптов -->
+    <!-- inject:js -->
+    <!-- endinject -->
+    <script type="text/javascript">
+      (function() {
+
+        "use strict";
+
+        var toggle = document.querySelector(".toggle-hamburger");
+        var element = document.querySelector(".header")
+
+        toggleHandler(toggle, element);
+
+        function toggleHandler(toggler, element) {
+          toggle.addEventListener( "click", function(e) {
+            e.preventDefault();
+            (element.classList.contains("is-active") === true) ? element.classList.remove("is-active") : element.classList.add("is-active");
+          });
+        }
+      })();
+    </script>
+    <a class="button" href="#" title="Вгору"></a>
   </body>
 </html>
