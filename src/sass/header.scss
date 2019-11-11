@@ -124,7 +124,7 @@
     min-width: 100% !important;
     opacity: 1;
     font-size: 28px;
-    font-family: "Ubuntu";
+    font-family: $title-font;
     color: $white-color;
     font-weight: bold;
     transform: none;
@@ -138,7 +138,7 @@
     min-width: 100% !important;
     opacity: 1;
     font-size: 28px;
-    font-family: "Ubuntu";
+    font-family: $title-font;
     color: $white-color;
     font-weight: bold;
   }
@@ -147,15 +147,10 @@
 .nav__link {
   position: relative;
   font-size: 18px;
-  font-family: "Ubuntu";
+  font-family: $title-font;
   color: $white-color;
   font-weight: bold;
   line-height: 3.293;
-  font-size: 28px;
-  font-family: "Ubuntu";
-  color: $white-color;
-  font-weight: bold;
-  line-height: 2.117;
 
   &:hover::after  {
     transition-property: opacity;
